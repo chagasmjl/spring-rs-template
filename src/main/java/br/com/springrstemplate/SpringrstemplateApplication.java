@@ -1,19 +1,19 @@
 package br.com.springrstemplate;
 
-import java.util.Arrays;
-
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.Bean;
+import org.springframework.web.WebApplicationInitializer;
 
-import br.com.springrstemplate.entity.Log;
-
+@EnableAutoConfiguration
 @SpringBootApplication
-public class SpringRsTemplateApplication {
+public class SpringrstemplateApplication extends SpringBootServletInitializer implements WebApplicationInitializer {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringRsTemplateApplication.class, args);
+		SpringApplication.run(SpringrstemplateApplication.class, args);
 	}
 	
 	@Bean

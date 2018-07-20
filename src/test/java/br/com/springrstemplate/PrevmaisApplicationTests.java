@@ -10,14 +10,15 @@ import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.boot.web.server.LocalServerPort;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.web.client.RestTemplate;
-import br.com.springrstemplate.controller.LoggerController;
+
+import br.com.springrstemplate.log.LogController;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = WebEnvironment.DEFINED_PORT)
 public class PrevmaisApplicationTests {
 	
 	@Autowired
-	private LoggerController controller;
+	private LogController controller;
 	@LocalServerPort
 	private int port;
 	@Autowired

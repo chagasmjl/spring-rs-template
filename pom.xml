@@ -6,7 +6,7 @@
 	<groupId>br.com.caixaseguros</groupId>
 	<artifactId>spring-rs-template</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 
 	<name>spring-rs-template</name>
 	<description>Demo project for Spring Boot</description>
@@ -87,12 +87,12 @@
 		</dependency>
 		
 		<!-- to install ojdbc: mvn install:install-file -Dfile=ojdbc7.jar  -DgroupId=com.oracle -DartifactId=ojdbc7 -Dversion=12.1.0.1 -Dpackaging=jar  -->
-		<dependency>
+		<!-- <dependency>
             <groupId>com.oracle</groupId>
             <artifactId>ojdbc6</artifactId>
             <version>12.1.0.1</version>
             <scope>provided</scope>
-        </dependency>		
+        </dependency>		 -->
 		
 		<!-- Rest Doc with swagger -->
 		<!-- <dependency>

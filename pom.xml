@@ -6,7 +6,7 @@
 	<groupId>br.com.caixaseguros</groupId>
 	<artifactId>spring-rs-template</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 
 	<name>spring-rs-template</name>
 	<description>Demo project for Spring Boot</description>
@@ -117,7 +117,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-			<!-- <plugin>
+			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
 				<configuration>
@@ -128,7 +128,7 @@
 						</manifest>
 					</archive>
 				</configuration>
-			</plugin> -->
+			</plugin>
 		</plugins>
 	</build>
 

@@ -28,7 +28,7 @@ public class SpringrstemplateApplication extends SpringBootServletInitializer im
 			//.forEach(username -> {
 				.forEach(logName -> {
 					//bookmarkRepository.save(new Bookmark(account, "http://bookmark.com/1/" + username, "A description"));
-					logRepository.save(new LogEntity(logName));
+					logRepository.save(new LogEntity(logName, logName +"_request"));
 				});
 	}
 }

@@ -6,8 +6,14 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+
+/**
+ * Entidade de banco 
+ *</br></br>
+ * Database entity
+ */
 @Entity
-@Table(name="NCL_WS_SOAP_LOG")
+@Table(name="LOG_TABLE")
 public class LogEntity{
 	
 	@Id
@@ -34,6 +40,10 @@ public class LogEntity{
 	
 	public LogEntity(String id) {
 		this.id = id;
+	}
+	public LogEntity(String id, String request) {
+		this.id = id;
+		this.request = request;
 	}
 	
 	

@@ -13,8 +13,8 @@ import org.springframework.web.client.RestTemplate;
 
 import br.com.springrstemplate.log.LogController;
 
-@RunWith(SpringRunner.class)
-@SpringBootTest(webEnvironment = WebEnvironment.DEFINED_PORT)
+//@RunWith(SpringRunner.class)
+//@SpringBootTest(webEnvironment = WebEnvironment.DEFINED_PORT)
 public class PrevmaisApplicationTests {
 	
 	@Autowired
@@ -25,7 +25,7 @@ public class PrevmaisApplicationTests {
 	private RestTemplate template;
 	
 	
-	@Test
+	//@Test
 	public void contextLoads() {
 		assertThat(controller).isNotNull();
 	}

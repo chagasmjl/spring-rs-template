@@ -6,7 +6,9 @@ import java.util.UUID;
 import org.springframework.data.domain.Example;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.ExampleMatcher;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
+import org.springframework.web.client.HttpClientErrorException;
 
 /**
  * Classe que representa o negócio onde as regras são de fato implementadas

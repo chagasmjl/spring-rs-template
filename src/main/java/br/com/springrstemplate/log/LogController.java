@@ -1,6 +1,11 @@
 package br.com.springrstemplate.log;
 
+import java.sql.SQLException;
 import java.util.Collection;
+
+import javax.swing.tree.ExpandVetoException;
+import javax.xml.ws.http.HTTPException;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.HttpClientErrorException;
 
 /**
  * Controller REST onde expomos os métodos do nosso serviço ao mundo externo
@@ -34,9 +40,10 @@ public class LogController {
 	 * </br></br>
 	 * Example of a GET to get all itens of that entity from database
 	 * @return {@link ResponseEntity} 
+	 * @throws Exception 
 	 */
 	@GetMapping("/logs")
-	public ResponseEntity<?> getAll(){
+	public ResponseEntity<?> getAll() throws Exception{
 		return new ResponseEntity<>(business.getAllLogs(), HttpStatus.OK);
 	}
 	
@@ -50,9 +57,11 @@ public class LogController {
 	 * 
 	 * @param id
 	 * @return {@link ResponseEntity}
+	 * @throws ExpandVetoException 
 	 */
 	@GetMapping("log/{id}")
-	public ResponseEntity<?> getLog(@PathVariable String id){
+	public ResponseEntity<?> getLog(@PathVariable String id) throws Exception{
+		if ("teste".equals(id)) throw new HttpClientErrorException(HttpStatus.BAD_GATEWAY, "Id obrigatório.");
 		return new ResponseEntity<>(business.getLogs(new LogEntity(id)), HttpStatus.OK);
 	}
 	
